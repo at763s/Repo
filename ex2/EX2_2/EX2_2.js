@@ -66,8 +66,6 @@ function drawFlower(flower){
   image(daisyImg,0,0, flower.size, flower.size);
  } else if (flower.type === 'tulip'){
   image(tulipImg,0,0, flower.size, flower.size);
- }else if (flower.type === 'star'){
-   star(mouseX, mouseY, 5, 11.6, 5);
  }
  pop();
 }
