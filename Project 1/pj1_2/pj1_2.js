@@ -3,8 +3,6 @@ let button;
 let hooked = [];
 let numHooked = 3;
 
-let state = 0
-
 function preload(){
  let fishIMG = loadImage(data/fish.png)
  let bootIMG = loadImage(data/boot.png)
@@ -27,36 +25,14 @@ button2.mousePressed(homeScreen)
 }
 
 function draw() {
-  if (state === 0){
-    button.show();
-    button2.hide();
-    button3.hide();
-   //bear fishing here 
-  }
-  else if (state === 1){
-   imageMode(CENTER)
-   image(bootIMG)
-   button.hide();
-   button2.show();
-  }
-  else if (state === 2){
-   imageMode(CENTER)
-   image(stikIMG)
-   button.hide();
-   button2.show();
-  }
-  else if (state === 3){
-   imageMode(CENTER)
-   image(fishIMG)
-   button.hide();
-   button2.show(); 
-  }
 }
 
 function homeScreen(){
-  state = 0
+
 }
 
 function fish(){
- state = (state + 1) % 4;
+ imageModer(CENTER)
+ let randoImg = random(hooked);
+ image(randoImg, width / 2, height / 2);
 }
